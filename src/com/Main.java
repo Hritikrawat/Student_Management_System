@@ -36,6 +36,9 @@ public class Main
 				break;
 			case 2:
 				//Update
+				int Id = sc.nextInt(); 
+				Student st1 = StudentUtility.update(student , Id);
+				System.out.println("\u001B[32m New Updated data "+st1.getName()+" "+st1.getAge()+"\u001B[0m");
 				break;
 			case 3:
 				//Display

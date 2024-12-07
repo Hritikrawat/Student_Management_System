@@ -25,6 +25,32 @@ public class StudentUtility
 		return stu;
 	}
 	
+	//Update Student By Id
+	public static Student update(List<Student> st , int Id) 
+	{
+		Student stu = null;
+		if(st.isEmpty())
+			System.out.println("List is Empty");
+		else 
+		{
+//			Iterator e = st.iterator();
+			for (Student student : st) 
+			{
+				if(Id == student.getId()) 
+				{
+					System.out.println("Enter Name to update :");
+					student.setName(sc.next());
+					System.out.println("Enter age to update");
+					student.setAge(sc.nextInt());
+					System.out.println("\u001B[32m"+" Student Updated successfully "+"\u001B[0m");
+					stu = student;
+				}
+			}
+			
+		}
+		return stu;
+	}
+	
 	//Displaying every student in the list 
 	public static void displayAll(List<Student> student) 
 	{
